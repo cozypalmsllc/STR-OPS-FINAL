@@ -80,6 +80,29 @@
 
   <!-- Placeholder: Meta Pixel (we'll wire this next) -->
   <!-- <script>/* Meta Pixel goes here */</script> -->
+</script>  <!-- this closes your previous inline <script> -->
+  
+<!-- Meta Pixel START -->
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1466063534635731&ev=PageView&noscript=1"/></noscript>
+src="https://connect.facebook.net/en_US/fbevents.js"/></noscript>
+<!-- Meta Pixel END -->
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1466063534635731');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1466063534635731&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
   <nav class="nav" aria-label="Primary">
@@ -208,13 +231,24 @@
     // Placeholder: Example outbound click tracking hook (for Meta Pixel later)
     const ids = ["buy-top","buy-hero","buy-bottom"]; 
     ids.forEach(id=>{
-      const el = document.getElementById(id);
-      if(!el) return;
-      el.addEventListener('click',()=>{
-        // fbq('track','AddToCart', {content_name:'STR Ops Pack', value:55, currency:'USD'});
-        // If you prefer ViewContent on outbound, swap the event name above.
+  <script>
+const ids = ["buy-top","buy-hero","buy-bottom"];
+ids.forEach(id=>{
+  const el = document.getElementById(id);
+  if(!el) return;
+  el.addEventListener('click', ()=>{
+    if (typeof fbq === 'function') {
+      fbq('track','AddToCart', {
+        content_name: 'STR Ops Pack',
+        content_category: 'Digital Product',
+        content_ids: ['STR-OPS-PACK'],
+        content_type: 'product',
+        value: 55,
+        currency: 'USD'
       });
-    });
-  </script>
+    }
+  });
+});
+</script>
 </body>
 </html>
