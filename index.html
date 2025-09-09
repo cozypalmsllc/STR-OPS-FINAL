@@ -80,48 +80,49 @@
 
   <!-- Placeholder: Meta Pixel (we'll wire this next) -->
   <!-- <script>/* Meta Pixel goes here */</script> -->
-</script>  <!-- this closes your previous inline <script> -->
   
 <!-- Meta Pixel START -->
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1466063534635731&ev=PageView&noscript=1"/></noscript>
-<!-- Meta Pixel END -->
-<!-- Meta Pixel Code -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '1466063534635731');
 fbq('track', 'PageView');
+fbq('track', 'ViewContent', {
+  content_name: 'STR Ops Pack',
+  content_category: 'Digital Product',
+  content_ids: ['STR-OPS-PACK'],
+  content_type: 'product',
+  value: 55,
+  currency: 'USD'
+});
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1466063534635731&ev=PageView&noscript=1"
-/></noscript>
+src="https://www.facebook.com/tr?id=1466063534635731&ev=PageView&noscript=1"/></noscript>
 <!-- End Meta Pixel Code -->
 </head>
 <body>
-  <nav class="nav" aria-label="Primary">
-    <div class="nav__inner wrap">
-      <div class="logo">STR Ops Pack™</div>
-      <div style="display:flex;gap:10px;align-items:center">
-        <a class="cta cta--ghost" href="#inside" aria-label="See what's inside">What’s inside</a>
-        <a id="buy-top" class="cta" href="https://cozypalmsretreats1.gumroad.com/l/elzehj" target="_blank" rel="noopener" aria-label="Buy STR Ops Pack for $55">
-          <span class="price">$55</span> • Buy now →
-        </a>
-      </div>
+<nav class="nav" aria-label="Primary">
+  <div class="nav__inner wrap">
+    <div class="logo">STR Ops Pack™</div>
+    <div style="display:flex;gap:10px;align-items:center">
+      <a class="cta cta--ghost" href="#inside" aria-label="See what's inside">What’s inside</a>
+      <a id="buy-top" class="cta"
+         href="https://cozypalmsretreats1.gumroad.com/l/elzehj?utm_source=site&utm_medium=button&utm_campaign=str_ops_pack&utm_content=nav"
+         target="_blank" rel="noopener" aria-label="Buy STR Ops Pack for $55">
+        <span class="price">$55</span> • Buy now →
+      </a>
     </div>
-  </nav>
-
+  </div> <!-- ← add this closing div -->
+</nav>
   <header class="hero wrap">
     <span class="hero__eyebrow">🚀 Built for top 0.1% performance</span>
     <h1>Automate Your Airbnb <br/>in <span class="pill">10 Min/Week</span></h1>
     <p class="lead">Plug‑and‑play systems to run guest messaging, cleaners, and VA operations like a pro. Includes lifetime updates and ready‑to‑use templates for Airbnb, VRBO, and Booking.com.</p>
     <div class="hero__ctas">
-      <a id="buy-hero" class="cta" href="https://cozypalmsretreats1.gumroad.com/l/elzehj" target="_blank" rel="noopener">Buy for $55 →</a>
+     <a id="buy-hero" class="cta" href="https://cozypalmsretreats1.gumroad.com/l/elzehj?utm_source=site&utm_medium=button&utm_campaign=str_ops_pack&utm_content=hero" target="_blank" rel="noopener">Buy for $55 →</a>
       <a class="cta cta--ghost" href="#faq">See FAQs</a>
     </div>
     <div class="kpis">
@@ -219,35 +220,37 @@ src="https://www.facebook.com/tr?id=1466063534635731&ev=PageView&noscript=1"
   </section>
 
   <div class="cta-bar">
-    <a id="buy-bottom" class="cta" href="https://cozypalmsretreats1.gumroad.com/l/elzehj" target="_blank" rel="noopener" aria-label="Buy STR Ops Pack for $55">Get STR Ops Pack™ for $55 →</a>
+<a id="buy-bottom" class="cta"
+   href="https://cozypalmsretreats1.gumroad.com/l/elzehj?utm_source=site&utm_medium=button&utm_campaign=str_ops_pack&utm_content=bottom"
+   target="_blank" rel="noopener" aria-label="Buy STR Ops Pack for $55">
+  Get STR Ops Pack™ for $55 →
+</a>
   </div>
 
   <footer>
     <div>© 2025 Cozy Palms Retreats LLC. All rights reserved. · <a href="https://instagram.com/cozypalmsretreatsllc" target="_blank" rel="noopener">@cozypalmsretreatsllc</a></div>
   </footer>
-
-  <script>
-    // Placeholder: Example outbound click tracking hook (for Meta Pixel later)
-    const ids = ["buy-top","buy-hero","buy-bottom"]; 
-    ids.forEach(id=>{
-  <script>
-const ids = ["buy-top","buy-hero","buy-bottom"];
-ids.forEach(id=>{
-  const el = document.getElementById(id);
-  if(!el) return;
-  el.addEventListener('click', ()=>{
-    if (typeof fbq === 'function') {
-      fbq('track','AddToCart', {
-        content_name: 'STR Ops Pack',
-        content_category: 'Digital Product',
-        content_ids: ['STR-OPS-PACK'],
-        content_type: 'product',
-        value: 55,
-        currency: 'USD'
-      });
-    }
+  <!-- AddToCart tracking for Buy buttons -->
+<script>
+(function () {
+  var ids = ["buy-top","buy-hero","buy-bottom"];
+  ids.forEach(function (id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener("click", function () {
+      if (typeof fbq === "function") {
+        fbq("track", "AddToCart", {
+          content_name: "STR Ops Pack",
+          content_category: "Digital Product",
+          content_ids: ["STR-OPS-PACK"],
+          content_type: "product",
+          value: 55,
+          currency: "USD"
+        });
+      }
+    });
   });
-});
+})();
 </script>
 </body>
 </html>
